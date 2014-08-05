@@ -1,0 +1,15 @@
+
+# propiedades a modificar
+
+$wgSitename = "AragoPedia";
+
+$wgLogo             = "$wgScriptPath/Aragopedia/images/01-Simbolo-Aragopedia.png";
+
+$wgEnableUploads = true;
+
+
+# Incluir al final del archivo, configurando el path apropiado
+require_once("/var/www/mediawiki/extensions/Widgets/Widgets.php");
+require_once("/var/www/mediawiki/extensions/FormatNum-master/FormatNum.php");
+require_once("/var/www/mediawiki/extensions/pchart4mw/pChart4mw.php");
+
