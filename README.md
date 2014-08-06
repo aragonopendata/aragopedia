@@ -56,7 +56,7 @@ Para instalar la aplicación en local es necesario seguir los siguientes pasos:
 
         php maintenance/importDump.php < <<nombre del dump>>.xml
 		
-* Descomprimir el archivo mapas.zip e importar las imágenes en AragoPedia.
+* Descomprimir el archivo mapas.zip (disponible en http://opendata.aragon.es/aragopedia/dumps) e importar las imágenes en AragoPedia.
 
 		php maintenance/importImages.php <<ruta de la carpeta con las imagenes>> png
 
