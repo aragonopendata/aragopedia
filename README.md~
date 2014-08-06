@@ -10,7 +10,7 @@ La AragoPedia ofrece algunos de los datos recopilados por la iniciativa Aragón 
 
 En AragoPedia se presentan los datos organizados por municipios, comarcas, provincias y para el conjunto de Aragón en un formato accesible para todos los públicos. AragoPedia, permite además la incorporación de nuevos contenidos, por parte de usuarios autorizados, a través de su interfaz gráfica, de manera similar a la [Wikipedia][4]. 
 
-Esta aplicación se basa en la versión 1.21 del software de código abierto [MediaWiki][3]. Entre los principales argumentos que han motivado la utilización de MediaWiki destacan: 
+Ésta aplicación se basa en la versión 1.21 del software de código abierto [MediaWiki][3]. Entre los principales argumentos que han motivado la utilización de MediaWiki destacan: 
 * Está pensado para la creación de Webs colaborativas.
 * Es fácilmente personalizable.
 * Permite desacoplar los datos del formato de presentación, mediante el uso de plantillas.
