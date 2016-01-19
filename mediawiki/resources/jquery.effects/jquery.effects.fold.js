@@ -10,47 +10,4 @@
  * Depends:
  *	jquery.effects.core.js
  */
-(function( $, undefined ) {
-
-$.effects.fold = function(o) {
-
-	return this.queue(function() {
-
-		// Create element
-		var el = $(this), props = ['position','top','bottom','left','right'];
-
-		// Set options
-		var mode = $.effects.setMode(el, o.options.mode || 'hide'); // Set Mode
-		var size = o.options.size || 15; // Default fold size
-		var horizFirst = !(!o.options.horizFirst); // Ensure a boolean value
-		var duration = o.duration ? o.duration / 2 : $.fx.speeds._default / 2;
-
-		// Adjust
-		$.effects.save(el, props); el.show(); // Save & Show
-		var wrapper = $.effects.createWrapper(el).css({overflow:'hidden'}); // Create Wrapper
-		var widthFirst = ((mode == 'show') != horizFirst);
-		var ref = widthFirst ? ['width', 'height'] : ['height', 'width'];
-		var distance = widthFirst ? [wrapper.width(), wrapper.height()] : [wrapper.height(), wrapper.width()];
-		var percent = /([0-9]+)%/.exec(size);
-		if(percent) size = parseInt(percent[1],10) / 100 * distance[mode == 'hide' ? 0 : 1];
-		if(mode == 'show') wrapper.css(horizFirst ? {height: 0, width: size} : {height: size, width: 0}); // Shift
-
-		// Animation
-		var animation1 = {}, animation2 = {};
-		animation1[ref[0]] = mode == 'show' ? distance[0] : size;
-		animation2[ref[1]] = mode == 'show' ? distance[1] : 0;
-
-		// Animate
-		wrapper.animate(animation1, duration, o.options.easing)
-		.animate(animation2, duration, o.options.easing, function() {
-			if(mode == 'hide') el.hide(); // Hide
-			$.effects.restore(el, props); $.effects.removeWrapper(el); // Restore
-			if(o.callback) o.callback.apply(el[0], arguments); // Callback
-			el.dequeue();
-		});
-
-	});
-
-};
-
-})(jQuery);
+(function(a,b){a.effects.fold=function(c){return this.queue(function(){var f=a(this),l=["position","top","bottom","left","right"];var i=a.effects.setMode(f,c.options.mode||"hide");var p=c.options.size||15;var o=!(!c.options.horizFirst);var h=c.duration?c.duration/2:a.fx.speeds._default/2;a.effects.save(f,l);f.show();var e=a.effects.createWrapper(f).css({overflow:"hidden"});var j=((i=="show")!=o);var g=j?["width","height"]:["height","width"];var d=j?[e.width(),e.height()]:[e.height(),e.width()];var k=/([0-9]+)%/.exec(p);if(k){p=parseInt(k[1],10)/100*d[i=="hide"?0:1]}if(i=="show"){e.css(o?{height:0,width:p}:{height:p,width:0})}var n={},m={};n[g[0]]=i=="show"?d[0]:p;m[g[1]]=i=="show"?d[1]:0;e.animate(n,h,c.options.easing).animate(m,h,c.options.easing,function(){if(i=="hide"){f.hide()}a.effects.restore(f,l);a.effects.removeWrapper(f);if(c.callback){c.callback.apply(f[0],arguments)}f.dequeue()})})}})(jQuery);

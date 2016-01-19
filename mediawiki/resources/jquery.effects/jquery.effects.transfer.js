@@ -10,36 +10,4 @@
  * Depends:
  *	jquery.effects.core.js
  */
-(function( $, undefined ) {
-
-$.effects.transfer = function(o) {
-	return this.queue(function() {
-		var elem = $(this),
-			target = $(o.options.to),
-			endPosition = target.offset(),
-			animation = {
-				top: endPosition.top,
-				left: endPosition.left,
-				height: target.innerHeight(),
-				width: target.innerWidth()
-			},
-			startPosition = elem.offset(),
-			transfer = $('<div class="ui-effects-transfer"></div>')
-				.appendTo(document.body)
-				.addClass(o.options.className)
-				.css({
-					top: startPosition.top,
-					left: startPosition.left,
-					height: elem.innerHeight(),
-					width: elem.innerWidth(),
-					position: 'absolute'
-				})
-				.animate(animation, o.duration, o.options.easing, function() {
-					transfer.remove();
-					(o.callback && o.callback.apply(elem[0], arguments));
-					elem.dequeue();
-				});
-	});
-};
-
-})(jQuery);
+(function(a,b){a.effects.transfer=function(c){return this.queue(function(){var g=a(this),i=a(c.options.to),f=i.offset(),h={top:f.top,left:f.left,height:i.innerHeight(),width:i.innerWidth()},e=g.offset(),d=a('<div class="ui-effects-transfer"></div>').appendTo(document.body).addClass(c.options.className).css({top:e.top,left:e.left,height:g.innerHeight(),width:g.innerWidth(),position:"absolute"}).animate(h,c.duration,c.options.easing,function(){d.remove();(c.callback&&c.callback.apply(g[0],arguments));g.dequeue()})})}})(jQuery);

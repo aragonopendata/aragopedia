@@ -72,7 +72,18 @@ parent::setupSkinUserCss( $out );
 		wfRunHooks( 'SkinVectorStyleModules', array( &$this, &$styles ) );
 		$out->addModuleStyles( $styles );
 		
-$out->addHeadItem('analytics','<script type="text/javascript">'."
+
+
+
+$out->addHeadItem('analytics','
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+
+
+
+
+
+<script type="text/javascript">'."
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-36118896-2']);
   _gaq.push(['_setDomainName', 'aragon.es']);
@@ -83,7 +94,9 @@ $out->addHeadItem('analytics','<script type="text/javascript">'."
     ga.src = ('https:' == document.location.protocol ? 'https:/'+'/' : 'http:/'+'/') + 'stats.g.doubleclick.net/dc.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-</script>");
+</script>
+<script type=\"text/javascript\" src=\"/public/aod_funcs_wiki.js\"/></script>
+");
 	}
 
 	/**
@@ -172,32 +185,31 @@ class VectorTemplate extends BaseTemplate {
 <header>
 <div id="cabeceraRelacionados">
 	<ul>
-		<li class="active"><a href="http://opendata.aragon.es" title="Open data">OPEN DATA</a><p class="clear visible-xs"></p></li>
-<li class="clear visible-xs tamCero"></li>
-		<li><a href="http://aragonparticipa.aragon.es" title="Participaci&oacute;n ciudadana">PARTICIPACI&Oacute;N CIUDADANA</a></li>
+                <li class="clear visible-xs tamCero"></li>
+                <li><a href="http://transparencia.aragon.es" title="Transparencia" target="_blank">TRANSPARENCIA</a></li>
+                <li><a href="http://aragonparticipa.aragon.es" title="Participaci&oacute;n ciudadana" target="_blank">PARTICIPACI&Oacute;N CIUDADANA</a></li>
+                <li class="active"><a href="http://opendata.aragon.es" title="Open data">OPEN DATA</a><p class="clear visible-xs"></p></li>
 	</ul>
 </div>
 <div id="cabecera">
 	<ul>
-		<li><a href="http://www.aragon.es" target="_blank"><img src="/public/i/logo_aragob.png" width="127" height="28" alt="Gobierno de Arag&oacute;n" title="Gobierno de Arag&oacute;n" /></a></li>
+		<li><img src="/public/i/logo_aragob.png" width="127" height="28" alt="Gobierno de Arag&oacute;n" title="Gobierno de Arag&oacute;n" /></li>
 	</ul>
 </div>
 
 <div class="banner">
-	<ul>
-		<li class="i_i bannerLogo">
-			<a href="/" title="ARAG&Oacute;N OPEN DATA"><img class="" src="/public/i/logo_aod.png" alt="ARAG&Oacute;N OPEN DATA" /></a>
-		</li>
-<li class="clear visible-xs tamCero"></li>
-		<li class="bannerBuscador">
-			<form id="cajaBusqBanner" action="/catalogo" method="get">
-				<label for="cajaDeBusqInput" class="oculto">Buscar conjuntos de datos</label>
-				<button class="btn-search d_d" type="submit">Buscar</button>
-				<input id="cajaDeBusqInput" type="text" name="q" value="" class="search anchoSearchBanner d_d"  />
-				<!--<input id="cajaBusqInput" type="text" name="q" value="" class="search anchoSearchBanner d_d" placeholder="ARAG&Oacute;N OPEN DATA BUSCA DATOS" />-->
-			</form>
-		</li>
-	</ul>
+	<div class="bannerInline  bannerLogo" style="text-align: right;" >
+		<a href="/" title="ARAGÓN OPEN DATA"><img class=""  id="idTotal" src="http://opendata.aragon.es/public/i/logo_aod.png" alt="ARAGÓN OPEN DATA"></a>
+	</div>
+	<div class="bannerInline bannerBuscador" style="text-align: left; padding-top: 1.5%;">
+		<form id="cajaBusqBanner" action="/catalogo" method="get">
+<!--			<label for="cajaDeBusqInput" class="oculto">Buscar conjuntos de datos</label>-->
+			
+			<input id="cajaDeBusqInput" name="q" value="" class="search anchoSearchBanner" type="text"">
+			<button class="btn-search" type="submit">Buscar</button>
+			<!--<input id="cajaBusqInput" type="text" name="q" value="" class="search anchoSearchBanner d_d" placeholder="ARAG&Oacute;N OPEN DATA BUSCA DATOS" />-->
+		</form>
+	</div>
 </div>
 <div class="clear"></div>
 </header>
@@ -394,43 +406,7 @@ class VectorTemplate extends BaseTemplate {
 </li></ul>
 </div>
 </footer>
-<script>
 
-
-$(document).ready(function() {
-
-      //al inicio, quitarlo si tiene valor porque lo autorrellene el navegador de otras visitas
-  if (($("#cajaDeBusqInput").val() != "")) {
-    $("#cajaDeBusqInput").css("background", "#FFFFFF");
-  }
-
-  $("#cajaDeBusqInput").on('blur', function() {
-    if (($("#cajaDeBusqInput").val() != "")) {
-      $("#cajaDeBusqInput").css("background", "#FFFFFF");
-    }
-  });
-
-});
-$(function(){
-    $(window).scroll(function() {
-        $html = $("html");
-        if($html.hasClass('webkit')){
-            var scrollTop = $("body")[0].scrollTop;
-        }else if($html.hasClass('firefox')){
-            var scrollTop = $("html")[0].scrollTop;
-        }else{
-            var scrollTop = $("html")[0].scrollTop;
-        }
-
-        if( scrollTop < 160 ){
-            $('body').removeClass('mini');
-        }else{
-            $('body').addClass('mini');
-        }
-    });
-    $("body").trigger('scroll');
-});
-</script>
 	</body>
 </html>
 <?php
@@ -638,6 +614,7 @@ $(function(){
 		</div>
 	</form>
 </div>
+
 <?php
 
 				break;

@@ -8,15 +8,18 @@
 <link rel="search" type="application/opensearchdescription+xml" href="http://opendata.aragon.es/aragopedia/opensearch_desc.php" title="Aragopedia (es)" />
 
 <link rel="alternate" type="application/atom+xml" title="Feed Atom de Aragopedia" href="http.//opendata.aragon.es/aragopedia/index.php?title=Especial:CambiosRecientes&amp;feed=atom" />
-<link rel="stylesheet" href="http://opendata.aragon.es/aragopedia/load.php?debug=false&amp;lang=es&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<!--<link rel="stylesheet" href="http://opendata.aragon.es/aragopedia/load.php?debug=false&amp;lang=es&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />-->
+<link rel="stylesheet" href="http://preopendata.aragon.es/aragopedia/load.php?debug=false&amp;lang=es&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
 <meta name="ResourceLoaderDynamicStyles" content="" />
-<link rel="stylesheet" href="http://opendata.aragon.es/aragopedia/load.php?debug=false&amp;lang=es&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<!--<link rel="stylesheet" href="http://opendata.aragon.es/aragopedia/load.php?debug=false&amp;lang=es&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />-->
+<link rel="stylesheet" href="http://preopendata.aragon.es/aragopedia/load.php?debug=false&amp;lang=es&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
 <link rel="stylesheet"
 	href="Aragopedia/ext/jquery/jquery-ui-1.10.3.custom/css/smoothness/jquery-ui-1.10.3.custom.css" />
 <link rel="stylesheet" type="text/css" href="Aragopedia/css/aragopedia.css" />
+<!--<link rel="favourites icon" href="http://opendata.aragon.es/public/i/favicon.ico" />-->
 <link rel="favourites icon" href="http://opendata.aragon.es/public/i/favicon.ico" />
 
-  <link rel="stylesheet" href="public/themes/aod/style.css" media="screen" type="text/css" />
+<!--<link rel="stylesheet" href="public/themes/aod/style.css" media="screen" type="text/css" />-->
 <script src="Aragopedia/config/lista_paginas.js"></script>
 
 <style>a:lang(ar),a:lang(ckb),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
@@ -26,6 +29,86 @@
 <script src="Aragopedia/ext/jquery/jquery-1.8.3.min.js"></script>
 <script
 	src="Aragopedia/ext/jquery/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+
+<style type="text/css">
+	.btn-login {
+		vertical-align: bottom;
+		margin-left: 4px;
+	}
+
+	.bannerInline {
+		display: inline-block;
+		width: 45%;
+		padding: 1%;
+		vertical-align: middle;
+	}
+
+
+	@media (min-width: 320px) and (max-width: 479px) {
+		/* La caja de búsqueda*/
+		#cajaDeBusqInput{
+			max-width: 360px;
+			width: 55%;
+		}
+	}
+
+	@media (min-width: 480px) and (max-width: 599px) {
+		/* La caja de búsqueda*/
+		#cajaDeBusqInput{
+			max-width: 360px;
+			width: 65%;
+		}
+	}
+
+
+
+	@media screen and (min-width:600px) and (max-width: 767px)  {
+		/* La caja de búsqueda*/
+		#cajaDeBusqInput{
+			max-width: 360px;
+			width: 72%;
+		}
+	}
+
+	@media screen and (min-width:768px) and (max-width: 1023px)  {
+		/* La caja de búsqueda*/
+		#cajaDeBusqInput{
+			max-width: 360px;
+			width: 80%;
+		}
+	}
+
+	@media screen and (min-width:1024px){
+		/* La caja de búsqueda*/
+		#cajaDeBusqInput{
+			max-width: 400px;
+			width: 75%;
+		}
+	}
+
+	#idTotal {
+		max-width: 100%;
+		height: auto;
+	}
+	
+	
+	@font-face {
+		font-family: aragopiaFont;
+		font-style:  normal;
+		font-weight: normal;
+		src: url('../public/fonts/AragopediaFont.otf');
+	}
+
+	.txtDescripcionAragoPedia{
+		color: #999790;
+		font-family: 'aragopiaFont', Helvetica, Arial, sans-serif;
+		font-size: 13px;
+		line-height: 16px;
+	}
+</style>
 
 <!-- Goo Analytics -->
 <script type="text/javascript">
@@ -40,43 +123,44 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+<script type="text/javascript" src="/public/aod_funcs_wiki.js"/></script>
 <!-- Fin Goo Analytics -->
 </head>
 <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Página_principal skin-vector action-view vector-animateLayout" onload="init()">
 <header>
 <div id="cabeceraRelacionados">
 	<ul>
-		<li class="active"><a href="http://opendata.aragon.es" title="Open data">OPEN DATA</a><p class="clear visible-xs"></p></li>
-<li class="clear visible-xs tamCero"></li>
-		<li><a href="http://aragonparticipa.aragon.es" title="Participaci&oacute;n ciudadana">PARTICIPACI&Oacute;N CIUDADANA</a></li>
+                <li class="clear visible-xs tamCero"></li>
+                <li><a href="http://transparencia.aragon.es" title="Transparencia" target="_blank">TRANSPARENCIA</a></li>
+                <li><a href="http://aragonparticipa.aragon.es" title="Participaci&oacute;n ciudadana" target="_blank">PARTICIPACI&Oacute;N CIUDADANA</a></li>
+                <li class="active"><a href="http://opendata.aragon.es" title="Open data">OPEN DATA</a><p class="clear visible-xs"></p></li>
 	</ul>
 </div>
 <div id="cabecera">
 	<ul>
-		<li><a href="http://www.aragon.es" target="_blank"><img src="/public/i/logo_aragob.png" width="127" height="28" alt="Gobierno de Arag&oacute;n" title="Gobierno de Arag&oacute;n" /></a></li>
+		<li><img src="/public/i/logo_aragob.png" width="127" height="28" alt="Gobierno de Arag&oacute;n" title="Gobierno de Arag&oacute;n" /></li>
 	</ul>
 </div>
 
 <div class="banner">
-	<ul>
-		<li class="i_i bannerLogo">
-			<a href="/" title="ARAG&Oacute;N OPEN DATA"><img class="" src="/public/i/logo_aod.png" alt="ARAG&Oacute;N OPEN DATA" /></a>
-		</li>
-<li class="clear visible-xs tamCero"></li>
-		<li class="bannerBuscador">
-			<form id="cajaBusqBanner" action="/catalogo" method="get">
-				<label for="cajaDeBusqInput" class="oculto">Buscar conjuntos de datos</label>
-				<button class="btn-search d_d" type="submit">Buscar</button>
-				<input id="cajaDeBusqInput" type="text" name="q" value="" class="search anchoSearchBanner d_d" onfocus="hidePlaceHolder('cajaDeBusqInput')" onblur="showPlaceHolder('cajaDeBusqInput')" />
-				<!--<input id="cajaBusqInput" type="text" name="q" value="" class="search anchoSearchBanner d_d" placeholder="ARAG&Oacute;N OPEN DATA BUSCA DATOS" />-->
-			</form>
-		</li>
-	</ul>
+	<div class="bannerInline bannerLogo" style="text-align: right;">
+		<a href="/" title="ARAGÓN OPEN DATA"><img id="idTotal" src="http://opendata.aragon.es/public/i/logo_aod.png" alt="ARAGÓN OPEN DATA"></a>
+	</div>
+	<div class="bannerInline bannerBuscador" style="text-align: left; padding-top: 1.5%;">
+		<form id="cajaBusqBanner" action="/catalogo" method="get">
+<!--			<label for="cajaDeBusqInput" class="oculto">Buscar conjuntos de datos</label>-->
+			
+			<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input id="cajaDeBusqInput" name="q" value="" class="search anchoSearchBanner ui-autocomplete-input" type="text" autocomplete="off">
+			<button class="btn-search" type="submit">Buscar</button>
+			<!--<input id="cajaBusqInput" type="text" name="q" value="" class="search anchoSearchBanner d_d" placeholder="ARAG&Oacute;N OPEN DATA BUSCA DATOS" />-->
+		</form>
+	</div>
 </div>
+
 <div class="clear"></div>
 </header>
 <nav>
-  <div id="navegacion" class="botones botonesSuperiorLista">
+  <div id="navegacion" class="botones botonesSuperiorLista" style="top: 41px;">
     <ul>
       <li onmousedown="javascript:this.className='botonSuperiorClicked first';" onmouseup="javascript:this.className='botonSuperior first';"
             onmouseover="javascript:this.className='botonSuperiorOver first';" onmouseout="javascript:this.className='botonSuperior first';"
@@ -112,7 +196,7 @@
 		
 		<div id="cabecera_aragopedia" class="contenido">
 			<img id="bienvenida" src="Aragopedia/images/09-TXT-Bienvenidos-AragoPedia.png"/>
-			<img id="txt_bienvenida" src="Aragopedia/images/10-TXT-Introduccion-AragoPedia.png"/>
+			<div id="txt_bienvenida" class="txtDescripcionAragoPedia">AragoPedia es una iniciativa de Arag&oacute;n Open Data para acercar la informaci&oacute;n a los ciudadanos, mostrando los datos abiertos de Arag&oacute;n a nivel regional y local. Con datos de AragoPedia tambi&eacute;n se ha generado AragoDBPedia para facilitar la reutilizaci&oacute;n de la informaci&oacute;n.</div>
 			<div id="infowiki">
 			<p>768 ARTÍCULOS</p>
 			<p><?php
@@ -1494,14 +1578,17 @@ echo date("j.m.Y | G:i:s"); ?></p>
 							<li id="ca-protect"><a href="/index.php?title=P%C3%A1gina_principal&amp;action=protect"  title="Proteger esta página [=]" accesskey="=">Proteger</a></li>
 					</ul>
 	</div>
-</div--><div id="portada">PORTADA</div>
-<div id="p-search" role="search">
-	<h3><label for="searchInput">Buscar</label></h3>
-	<form action="/aragopedia/index.php" id="searchform">
-				<div id="simpleSearch">
-						<input name="search" placeholder="Buscar" title="Buscar en Aragopedia [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Busca este texto en las páginas" id="searchButton"><img src="/aragopedia/skins/vector/images/search-ltr.png?303" alt="Buscar" width="12" height="13" /></button>								<input type='hidden' name="title" value="Especial:Buscar"/>
-		</div>
-	</form>
+</div-->
+<div id="etiquetasHome" style="width: 100%;">
+	<div id="portada">PORTADA</div>
+	<div id="p-search" role="search">
+		<h3><label for="searchInput">Buscar</label></h3>
+		<form action="/aragopedia/index.php" id="searchform">
+					<div id="simpleSearch">
+							<input name="search" placeholder="Buscar" title="Buscar en Aragopedia [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Busca este texto en las páginas" id="searchButton"><img src="/aragopedia/skins/vector/images/search-ltr.png?303" alt="Buscar" width="12" height="13" /></button>								<input type='hidden' name="title" value="Especial:Buscar"/>
+			</div>
+		</form>
+	</div>
 </div>
 				</div>
 			</div>
@@ -1663,18 +1750,13 @@ function init(){
 jQ(function(){
     jQ(window).scroll(function() {
         $html = jQ("html");
-        if($html.hasClass('webkit')){
-            var scrollTop = jQ("body")[0].scrollTop;
-        }else if($html.hasClass('firefox')){
-            var scrollTop = jQ("html")[0].scrollTop;
-        }else{
-            var scrollTop = jQ("html")[0].scrollTop;
-        }
+        if ($(window).width()>=1012){
 
-        if( scrollTop < 160 ){
-            jQ('body').removeClass('mini');
-        }else{
-            jQ('body').addClass('mini');
+           if( $(document).scrollTop() < 210 ){
+              jQ('body').removeClass('mini');
+           }else{
+              jQ('body').addClass('mini');
+           }
         }
     });
     jQ("body").trigger('scroll');

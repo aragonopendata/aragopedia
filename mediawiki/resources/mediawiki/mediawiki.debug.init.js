@@ -1,3 +1,1 @@
-jQuery( function () {
-	mediaWiki.Debug.init();
-} );
+jQuery(function(){mediaWiki.Debug.init()});

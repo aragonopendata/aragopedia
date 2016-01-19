@@ -1,15 +1,1 @@
-( function ( mw, $ ) {
-	// Only a view can be a post-edit.
-	if ( mw.config.get( 'wgAction' ) !== 'view' ) {
-		return;
-	}
-
-	// Matches EditPage::POST_EDIT_COOKIE_KEY_PREFIX
-	var cookieKey = mw.config.get( 'wgCookiePrefix' ) + 'PostEditRevision' + mw.config.get( 'wgCurRevisionId' );
-
-	if ( $.cookie( cookieKey ) === '1' ) {
-		// We just saved this page
-		$.cookie( cookieKey, null, { path: '/' } );
-		mw.config.set( 'wgPostEdit', true );
-	}
-} ( mediaWiki, jQuery ) );
+(function(c,a){if(c.config.get("wgAction")!=="view"){return}var b=c.config.get("wgCookiePrefix")+"PostEditRevision"+c.config.get("wgCurRevisionId");if(a.cookie(b)==="1"){a.cookie(b,null,{path:"/"});c.config.set("wgPostEdit",true)}}(mediaWiki,jQuery));

@@ -10,42 +10,4 @@
  * Depends:
  *	jquery.effects.core.js
  */
-(function( $, undefined ) {
-
-$.effects.pulsate = function(o) {
-	return this.queue(function() {
-		var elem = $(this),
-			mode = $.effects.setMode(elem, o.options.mode || 'show'),
-			times = ((o.options.times || 5) * 2) - 1,
-			duration = o.duration ? o.duration / 2 : $.fx.speeds._default / 2,
-			isVisible = elem.is(':visible'),
-			animateTo = 0;
-
-		if (!isVisible) {
-			elem.css('opacity', 0).show();
-			animateTo = 1;
-		}
-
-		if ((mode == 'hide' && isVisible) || (mode == 'show' && !isVisible)) {
-			times--;
-		}
-
-		for (var i = 0; i < times; i++) {
-			elem.animate({ opacity: animateTo }, duration, o.options.easing);
-			animateTo = (animateTo + 1) % 2;
-		}
-
-		elem.animate({ opacity: animateTo }, duration, o.options.easing, function() {
-			if (animateTo == 0) {
-				elem.hide();
-			}
-			(o.callback && o.callback.apply(this, arguments));
-		});
-
-		elem
-			.queue('fx', function() { elem.dequeue(); })
-			.dequeue();
-	});
-};
-
-})(jQuery);
+(function(a,b){a.effects.pulsate=function(c){return this.queue(function(){var g=a(this),k=a.effects.setMode(g,c.options.mode||"show"),j=((c.options.times||5)*2)-1,h=c.duration?c.duration/2:a.fx.speeds._default/2,d=g.is(":visible"),e=0;if(!d){g.css("opacity",0).show();e=1}if((k=="hide"&&d)||(k=="show"&&!d)){j--}for(var f=0;f<j;f++){g.animate({opacity:e},h,c.options.easing);e=(e+1)%2}g.animate({opacity:e},h,c.options.easing,function(){if(e==0){g.hide()}(c.callback&&c.callback.apply(this,arguments))});g.queue("fx",function(){g.dequeue()}).dequeue()})}})(jQuery);

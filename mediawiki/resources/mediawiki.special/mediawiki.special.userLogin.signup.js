@@ -1,10 +1,1 @@
-/**
- * JavaScript for Special:UserLogin/signup
- */
-jQuery( document ).ready( function ( $ ) {
-	$( '#wpCreateaccountMail' )
-		.on( 'change', function() {
-			$( '.mw-row-password' ).toggle( !$( this ).attr( 'checked' ) );
-		} )
-		.trigger( 'change' );
-} );
+jQuery(document).ready(function(a){a("#wpCreateaccountMail").on("change",function(){a(".mw-row-password").toggle(!a(this).attr("checked"))}).trigger("change")});

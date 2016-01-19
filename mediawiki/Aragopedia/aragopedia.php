@@ -31,14 +31,15 @@
 <header>
 <div id="cabeceraRelacionados">
 	<ul>
-		<li class="active"><a href="http://opendata.aragon.es" title="Open data">OPEN DATA</a><p class="clear visible-xs"></p></li>
-<li class="clear visible-xs tamCero"></li>
-		<li><a href="http://aragonparticipa.aragon.es" title="Participaci&oacute;n ciudadana">PARTICIPACI&Oacute;N CIUDADANA</a></li>
-	</ul>
+                <li class="clear visible-xs tamCero"></li>
+                <li><a href="http://transparencia.aragon.es" title="Transparencia" target="_blank">TRANSPARENCIA</a></li>
+                <li><a href="http://aragonparticipa.aragon.es" title="Participaci&oacute;n ciudadana" target="_blank">PARTICIPACI&Oacute;N CIUDADANA</a></li>
+                <li class="active"><a href="http://opendata.aragon.es" title="Open data">OPEN DATA</a><p class="clear visible-xs"></p></li>
+        </ul>
 </div>
 <div id="cabecera">
 	<ul>
-		<li><a href="http://www.aragon.es" target="_blank"><img src="/public/i/logo_aragob.png" width="127" height="28" alt="Gobierno de Arag&oacute;n" title="Gobierno de Arag&oacute;n" /></a></li>
+		<li><img src="/public/i/logo_aragob.png" width="127" height="28" alt="Gobierno de Arag&oacute;n" title="Gobierno de Arag&oacute;n" /></li>
 	</ul>
 </div>
 
@@ -112,7 +113,7 @@ echo date("j.m.Y | G:i:s"); ?></p>
 		</div>
 		<div id="mapa" class="contenido">
 		<img id="busqueda_mapa" src="images/14-TXT-Busqueda-Mapa.png"/>
-		 <img id="mapa_img" src="images/mapaComarcas.png" usemap="#comarcas" alt="Mapa de comarcas" />
+		 <img id="mapa_img" src="images/mapaComarcas.jpg" usemap="#comarcas" alt="Mapa de comarcas" />
                     <map name="comarcas">
                     <area shape="poly" alt="La Jacetania" coords="114,47,104,43,95,39,106,37,112,30,119,24,124,15,127,5,138,7,146,12,152,19,162,16,164,27,165,39,167,51,162,59,151,62,141,59,131,62,121,59,118,49" href='javascript:openDialog("01")' title="La Jacetania" onMouseOver="self.status='La Jacetania'; return true">
                     <area shape="poly" alt="Alto Gállego" coords="157,57,168,55,166,44,163,34,165,23,170,15,179,11,187,17,188,29,186,40,189,50,193,59,201,64,195,71,192,81,184,76,172,75,158,75,150,70,154,58" href='javascript:openDialog("02")' title="Alto G llego" onMouseOver="self.status='Alto G llego'; return true">

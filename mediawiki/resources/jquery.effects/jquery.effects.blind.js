@@ -10,40 +10,4 @@
  * Depends:
  *	jquery.effects.core.js
  */
-(function( $, undefined ) {
-
-$.effects.blind = function(o) {
-
-	return this.queue(function() {
-
-		// Create element
-		var el = $(this), props = ['position','top','bottom','left','right'];
-
-		// Set options
-		var mode = $.effects.setMode(el, o.options.mode || 'hide'); // Set Mode
-		var direction = o.options.direction || 'vertical'; // Default direction
-
-		// Adjust
-		$.effects.save(el, props); el.show(); // Save & Show
-		var wrapper = $.effects.createWrapper(el).css({overflow:'hidden'}); // Create Wrapper
-		var ref = (direction == 'vertical') ? 'height' : 'width';
-		var distance = (direction == 'vertical') ? wrapper.height() : wrapper.width();
-		if(mode == 'show') wrapper.css(ref, 0); // Shift
-
-		// Animation
-		var animation = {};
-		animation[ref] = mode == 'show' ? distance : 0;
-
-		// Animate
-		wrapper.animate(animation, o.duration, o.options.easing, function() {
-			if(mode == 'hide') el.hide(); // Hide
-			$.effects.restore(el, props); $.effects.removeWrapper(el); // Restore
-			if(o.callback) o.callback.apply(el[0], arguments); // Callback
-			el.dequeue();
-		});
-
-	});
-
-};
-
-})(jQuery);
+(function(a,b){a.effects.blind=function(c){return this.queue(function(){var e=a(this),d=["position","top","bottom","left","right"];var i=a.effects.setMode(e,c.options.mode||"hide");var h=c.options.direction||"vertical";a.effects.save(e,d);e.show();var k=a.effects.createWrapper(e).css({overflow:"hidden"});var f=(h=="vertical")?"height":"width";var j=(h=="vertical")?k.height():k.width();if(i=="show"){k.css(f,0)}var g={};g[f]=i=="show"?j:0;k.animate(g,c.duration,c.options.easing,function(){if(i=="hide"){e.hide()}a.effects.restore(e,d);a.effects.removeWrapper(e);if(c.callback){c.callback.apply(e[0],arguments)}e.dequeue()})})}})(jQuery);
