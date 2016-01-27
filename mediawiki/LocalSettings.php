@@ -170,7 +170,7 @@ $wgCollectionFormats = array(
 $wgFavicon = "http://opendata.aragon.es/public/i/favicon.ico";
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfChangeMainPageURL';
 function lfChangeMainPageURL( $sk, &$tpl ) {
-	$tpl->data['nav_urls']['mainpage']['href'] = "http://preopendata.aragon.es/aragopedia";
+	$tpl->data['nav_urls']['mainpage']['href'] = "http://opendata.aragon.es/aragopedia";
 	return true;
 }
 

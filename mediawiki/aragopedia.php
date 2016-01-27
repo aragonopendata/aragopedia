@@ -8,11 +8,10 @@
 <link rel="search" type="application/opensearchdescription+xml" href="http://opendata.aragon.es/aragopedia/opensearch_desc.php" title="Aragopedia (es)" />
 
 <link rel="alternate" type="application/atom+xml" title="Feed Atom de Aragopedia" href="http.//opendata.aragon.es/aragopedia/index.php?title=Especial:CambiosRecientes&amp;feed=atom" />
-<!--<link rel="stylesheet" href="http://opendata.aragon.es/aragopedia/load.php?debug=false&amp;lang=es&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />-->
-<link rel="stylesheet" href="http://preopendata.aragon.es/aragopedia/load.php?debug=false&amp;lang=es&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<link rel="stylesheet" href="http://opendata.aragon.es/aragopedia/load.php?debug=false&amp;lang=es&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+
 <meta name="ResourceLoaderDynamicStyles" content="" />
-<!--<link rel="stylesheet" href="http://opendata.aragon.es/aragopedia/load.php?debug=false&amp;lang=es&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />-->
-<link rel="stylesheet" href="http://preopendata.aragon.es/aragopedia/load.php?debug=false&amp;lang=es&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<link rel="stylesheet" href="http://opendata.aragon.es/aragopedia/load.php?debug=false&amp;lang=es&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
 <link rel="stylesheet"
 	href="Aragopedia/ext/jquery/jquery-ui-1.10.3.custom/css/smoothness/jquery-ui-1.10.3.custom.css" />
 <link rel="stylesheet" type="text/css" href="Aragopedia/css/aragopedia.css" />
