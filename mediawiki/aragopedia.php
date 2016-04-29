@@ -15,6 +15,7 @@
 <link rel="stylesheet"
 	href="Aragopedia/ext/jquery/jquery-ui-1.10.3.custom/css/smoothness/jquery-ui-1.10.3.custom.css" />
 <link rel="stylesheet" type="text/css" href="Aragopedia/css/aragopedia.css" />
+<link rel="stylesheet" type="text/css" href="../public/themes/aod/tipografia.css" />
 <!--<link rel="favourites icon" href="http://opendata.aragon.es/public/i/favicon.ico" />-->
 <link rel="favourites icon" href="http://opendata.aragon.es/public/i/favicon.ico" />
 

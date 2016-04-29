@@ -96,6 +96,7 @@ $out->addHeadItem('analytics','
   })();
 </script>
 <script type=\"text/javascript\" src=\"/public/aod_funcs_wiki.js\"/></script>
+<link rel=\"stylesheet\" type=\"text/css\" href=\"../../../public/themes/aod/tipografia.css\" />
 ");
 	}
 
