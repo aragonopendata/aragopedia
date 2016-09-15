@@ -4,6 +4,7 @@
 ##AragoPedia
 
 Este repositorio contiene el código de la aplicación [AragoPedia][1], desarrollada como parte del proyecto [Aragón Open Data][2].
+Incluye también el código de una herramienta automática de carga de contenidos a partir de información estructurada en solr (WikiCodeGenerator).
 
 ### Introducción
 La AragoPedia ofrece algunos de los datos recopilados por la iniciativa Aragón Open Data, organizados territorialmente.
@@ -64,9 +65,14 @@ Para instalar la aplicación en local es necesario seguir los siguientes pasos:
 
 Para más información, consulta la [documentación técnica de MediaWiki](http://www.mediawiki.org/wiki/Manual:Installing_MediaWiki).
 
+###WikiCodeGenerator
+Antes de su utilización hay que disponer de solr con la información cargada y estructurada en cuatro columnas:  id (código identificativo), valor, predicado, tipo de entidad. Los contenidos pueden proceder de cualquier fuente de datos digital organizada territorialmente.
+El predicado incluirá opcionalmente referencia al año y a la unidad territorial. Un ejemplo para provincias: PLAZAS_APARTAMENTOS_PROVINCIA_*_aaaa
+En los ficheros javascript de la carpeta config se define la correspondencia entre predicado y la sección de la wiki en la que se desea incluir.
+
 ###Licencia
 
-El Gobierno de Aragón a través de Aragón Open Data pone a disposición de usuarios, desarrolladores y comunidad en general la aplicación denominada “AragoPedia” bajo la Licencia Pública de la Unión Europea “European Union Public Licence – EUPL”. Esta licencia, desarrollada en el seno de la Unión Europea, nació con la intención de ser la licencia bajo la cuál se liberasen los programas y aplicaciones desarrolladas por la Administración Pública y con la característica específica de ser compatible con otras licencias denominadas libres, como la GNU General Public License (GNU/GPL). Estas características dotan, a las aplicaciones así liberadas, de mayor seguridad jurídica y fomentan la interoperabilidad de los servicios de la Administración Electrónica.
+El Gobierno de Aragón a través de Aragón Open Data pone a disposición de usuarios, desarrolladores y comunidad en general las aplicaciones denominadas “AragoPedia” y “WikiCodeGenerator” bajo la Licencia Pública de la Unión Europea “European Union Public Licence – EUPL”. Esta licencia, desarrollada en el seno de la Unión Europea, nació con la intención de ser la licencia bajo la cuál se liberasen los programas y aplicaciones desarrolladas por la Administración Pública y con la característica específica de ser compatible con otras licencias denominadas libres, como la GNU General Public License (GNU/GPL). Estas características dotan, a las aplicaciones así liberadas, de mayor seguridad jurídica y fomentan la interoperabilidad de los servicios de la Administración Electrónica.
 
 Que el código de esta aplicación esté publicado bajo la licencia abierta [EUPL 1.1][9999] (European Union Public License 1.1), significa que puedes reutilizarlo, modificarlo y adaptarlo a tus necesidades de forma totalmente libre. Si utilizas el código, a modo de reconocimiento a Aragón Open Data incluye en tu proyecto nuestro logo en el cabecero o en el pie de página, te lo agradeceremos!
 

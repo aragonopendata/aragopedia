@@ -1,0 +1,38 @@
+.list{
+	border: 1px solid #808080;
+    height: 300px;
+	overflow: auto;
+	
+	}
+	
+	.list_fieldset{
+	width:45%;
+	display:inline;
+	}
+	
+	#loadingOverlay {
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 10000;
+     background-image:url(../images/disabled.png);
+}
+
+#loading {
+     width:120px;
+     top: 45%;
+     left: 45%;
+     position: absolute;
+     background-color: white;
+     border: 2px solid #0B678E;
+    color: #0B678E;
+     padding:15px;
+     text-align:center;
+}
+
+#logged{
+	display:none;
+	}

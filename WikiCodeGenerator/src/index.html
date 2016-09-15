@@ -1,0 +1,78 @@
+<html>
+	<head>
+	<meta name="author" content="Idearium Consultores SL - www.idearium-consultores.com" />
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+		<title>	Script de creacion de datos en Aragopedia</title>
+<!--		<script type="text/javascript" language="JavaScript" src="config/clasificacion.js"></script>-->
+		<script type="text/javascript" language="JavaScript" src="js/wcg.js"></script>
+		<script type="text/javascript" language="JavaScript" src="lib/jquery/jquery-1.8.3.min.js"></script>
+
+<script type="text/javascript" language="JavaScript" src="config/properties.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/wcg.css">
+	</head>
+	<body onLoad="init()">
+	<div id="loadingOverlay">
+<div id="loading"><img id="loadingGif" border="0"
+	src="images/loading.gif" alt="Cargando" title="Cargando"></img></div>
+</div>
+<!--		Script de creacion de dato en Aragopedia-->
+<!--		<br/>-->
+<!--		<input type="button" value="Login" onclick="javascript:login()";/>-->
+<!--		<br/>-->
+<!--		<input type="button" value="Get token" onclick="javascript:getToken()";/>-->
+<!--		<br/>-->
+<!--		<input type="button" value="Cargar munis Huesca" onclick="javascript:loadMunis(22)"/>-->
+<!--		<br/>-->
+<!--	<input type="button" value="Cargar munis Teruel" onclick="javascript:loadMunis(44)"/>-->
+<!--		<br/>-->
+<!--		<input type="button" value="Cargar munis Zaragoza" onclick="javascript:loadMunis(50)"/>-->
+<!--		<br/>-->
+<!--		<br/>-->
+		<div id="login">
+		<label>Usuario:</label><input type="text" id="user">
+		<label>Contraseña:</label><input type="password" id="pwd">
+		<input type="button" value="Iniciar sesión" onclick="javascript:login()";/>
+		</div>
+		<div id="logged">
+		Conectado como <span id="username"></span>
+		
+		<input type="button" value="Cerrar sesión" onclick="javascript:logOut()";/>
+		</div>
+		<div id="unidades">
+		<label>Unidades:</label>
+		<select id="units" onchange="loadClasificacion()">
+		<option value=""></option>
+		<option value="municipios">Municipios</option>
+		<option value="comarcas">Comarcas</option>
+		<option value="provincias">Provincias</option>
+		<option value="aragon">Aragón</option>
+		</select>
+		</div>
+		<fieldset class="list_fieldset">
+		<legend>Secciones</legend>
+		<div><button id="todasSecciones" class="allButton" onclick="selectAllSection()">Todas</button>
+			<button id="ningunaSeccion" class="noneButton" onclick="unselectAllSection()"> Ninguna</button></div>
+			
+		<div id="secciones" class="list">
+		</div>
+		</fieldset>
+		<fieldset class="list_fieldset">
+		<legend>Unidades</legend>
+		<div><button id="allMuniButton" class="allButton" onclick="selectAllUnits()">Todos</button>
+			<button id="noneMuniButton" class="noneButton" onclick="unselectAllUnits()"> Ninguno</button></div>
+		<div id="units_list" class="list">
+		</div>
+		</fieldset>
+		<button id="modificarWiki" class="applyButton" disabled onclick="loadWiki()"> Cargar en Wiki</button></div>
+		<p id="txtInformacion">No llevo nada</p>
+		<p id="problema">Problemas en:</p>
+		
+<!--		<script type="text/javascript">-->
+<!--	-->
+<!--	//loadSections();-->
+<!--//loadMunisList();-->
+<!---->
+<!--</script>-->
+	</body>
+	</html>
