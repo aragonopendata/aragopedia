@@ -28,12 +28,12 @@ $wgSitename = "AragoPedia";
 ## http://www.mediawiki.org/wiki/Manual:Short_URL
 ###$wgScriptPath = "/mediawiki";
 #$wgScriptPath = "";
-$wgScriptPath = "http://opendata.aragon.es/aragopedia";
+$wgScriptPath = "http://opendata.aragon.es/apps/aragopedia";
 $wgScriptExtension = ".php";
 
 ## The protocol and server name to use in fully-qualified URLs
 #$wgServer = "";
-$wgServer = "http://opendata.aragon.es/aragopedia";
+$wgServer = "http://opendata.aragon.es/apps/aragopedia";
 #$wgServer = "http://opendata4";
 
 ## The relative URL path to the skins directory
