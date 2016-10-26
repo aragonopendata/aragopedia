@@ -1,0 +1,155 @@
+.searchInput {
+	border: 1px solid rgb(118, 161, 184);
+	width: 321px;
+	margin-right: 3px;
+	height: 28px;
+	background-image: url(/public/i/lupa.jpg);
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-left: 3px;
+}
+
+.contenido {
+	width: 100%;
+	overflow: hidden;
+}
+
+.txtDescripcionAragoPedia{
+	float: left;
+	padding-top: 30px;
+}
+
+#infowiki {
+	float: left;
+	color: #76a1b8;
+	text-align: left;
+}
+
+div#simpleSearch button#searchButton {
+  background-image: url(/public/i/lupa.jpg) !important;
+  height: 30px;
+  margin-top: 2px;
+  width: 25px;
+  padding: 0;
+  padding-top: .3em;
+  padding-bottom: .2em;
+  padding-right: .4em;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+ul.twoColumns {
+	float: left;
+	position: relative;
+	left: 50%;
+	width: 100%;
+}
+
+.twoColumns li {
+	width: 459px;
+	float: left;
+}
+
+.twoColumns li.block {
+	position: relative;
+	right: 50%;
+	margin-top: 30px;
+}
+
+.twoColumns li.first {
+	border-right: 1px solid rgb(118, 161, 184);
+	padding-right: 30px;
+}
+
+.twoColumns li.last {
+	padding-left: 30px;
+}
+
+.txtIntro {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+ul.blocksBancoDatos {
+	float: left;
+}
+
+.blocksBancoDatos li {
+	float: left;
+	width: 460px;
+	height: 145px;
+	border-bottom: 3px solid #FFF;
+	cursor: pointer;
+	background-position: 0px -20px;
+}
+
+#dondeImg {
+  background-image: url(/public/aragopedia/i/09-Caja-Donde-Home.jpg);  background-repeat: no-repeat;
+}
+#queImg {
+  background-image: url(/public/aragopedia/i/10-Caja-Que-Home.jpg);  background-repeat: no-repeat;
+}
+#cuandoImg {
+  background-image: url(/public/aragopedia/i/11-Caja-Cuando-Home.jpg);  background-repeat: no-repeat;
+}
+
+.mapZonePreview { float: right; width: 458px; }
+.mapPreview { height: 436px; }
+
+			/* No style rules here yet */
+
+text.tooltipMap, tspan.tooltipMap {
+	font-family: 'aodRoboto', 'Roboto';
+  font-size: 14px;
+  pointer-events: none;
+	font-weight: bold;
+}
+
+/* Parte correspondiente al apartado de la parte responsive */
+
+@media screen and (min-width: 770px) and (max-width: 1024px){
+	.blocksBancoDatos li {
+		background-position: -56px -20px;
+		width: 348px;
+	}
+
+	.mapZonePreview {
+	  width: 348px;
+	}
+
+	ul.twoColumns {
+		width: 770px;
+	}
+
+	.twoColumns li {
+		width: 348px;
+	}
+}
+
+@media screen and (max-width: 769px){
+	.blocksBancoDatos li {
+		background-position: -70px -20px;
+		width: 320px;
+	}
+
+	.mapZonePreview {
+	  width: 320px;
+	}
+
+	ul.twoColumns {
+		width: 320px;
+	}
+
+	.twoColumns li {
+		width: 320px;
+	}
+
+	.twoColumns li.first {
+		border-right: 0px;
+	}
+	.twoColumns li.last {
+		padding-left: 0px;
+	}
+}
