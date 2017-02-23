@@ -102,6 +102,19 @@
   bottom: 0px;
 }
 
+.aplybutton{
+  position: fixed;
+  background: #76a1b8;
+  color: #FFF;
+  padding: 4px;
+  border: none;
+  font-family: aodRoboto;
+  font-weight: bold;
+  font-size: 15px;
+  top:35px;
+  right:35px;
+}
+
 .remodal-close:hover,
 .remodal-close:focus {
   color: #2b2e38;
@@ -231,6 +244,18 @@
   .remodal {
 		max-width: 1040px;
   }
+}
+
+@media screen and (min-width: 0px) and (max-width: 650px) {
+    .remodal-close-bottom {
+        visibility: visible;
+    }
+}
+
+@media screen and (min-width: 651px){
+    .remodal-close-bottom {
+        visibility: hidden;
+    }
 }
 
 /* IE8

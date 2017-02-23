@@ -444,3 +444,7 @@ text.tooltipMap, tspan.tooltipMap {
 @media screen and (max-width: 400px) {
 	.modalInner { padding: 15px; }
 }
+
+a{
+	text-decoration: underline;
+}
