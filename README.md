@@ -1,7 +1,7 @@
 
 <img src="http://presupuesto.aragon.es/static/assets/logo-gobierno-aragon.png" height="28px" /><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>![Logo Aragón Open Data](logoAragonOpenData.png)
 
-##AragoPedia
+## AragoPedia
 
 Este repositorio contiene el código de la aplicación [AragoPedia][1], desarrollada como parte del proyecto [Aragón Open Data][2].
 Incluye también el código de una herramienta automática de carga de contenidos a partir de información estructurada en solr (WikiCodeGenerator).
@@ -65,12 +65,12 @@ Para instalar la aplicación en local es necesario seguir los siguientes pasos:
 
 Para más información, consulta la [documentación técnica de MediaWiki](http://www.mediawiki.org/wiki/Manual:Installing_MediaWiki).
 
-###WikiCodeGenerator
+### WikiCodeGenerator
 Antes de su utilización hay que disponer de solr con la información cargada y estructurada en cuatro columnas:  id (código identificativo), valor, predicado, tipo de entidad. Los contenidos pueden proceder de cualquier fuente de datos digital organizada territorialmente.
 El predicado incluirá opcionalmente referencia al año y a la unidad territorial. Un ejemplo para provincias: PLAZAS_APARTAMENTOS_PROVINCIA_*_aaaa
 En los ficheros javascript de la carpeta config se define la correspondencia entre predicado y la sección de la wiki en la que se desea incluir.
 
-###Licencia
+### Licencia
 
 El Gobierno de Aragón a través de Aragón Open Data pone a disposición de usuarios, desarrolladores y comunidad en general las aplicaciones denominadas “AragoPedia” y “WikiCodeGenerator” bajo la Licencia Pública de la Unión Europea “European Union Public Licence – EUPL”. Esta licencia, desarrollada en el seno de la Unión Europea, nació con la intención de ser la licencia bajo la cuál se liberasen los programas y aplicaciones desarrolladas por la Administración Pública y con la característica específica de ser compatible con otras licencias denominadas libres, como la GNU General Public License (GNU/GPL). Estas características dotan, a las aplicaciones así liberadas, de mayor seguridad jurídica y fomentan la interoperabilidad de los servicios de la Administración Electrónica.
 
